@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://empportal-7ff8d.firebaseio.com/',
+  apiKey: "AIzaSyD9oNvoz02rLN1RR-sjYdpIfkdfCyTYOzQ",
+  authDomain: "empportal-7ff8d.firebaseapp.com",
+  databaseURL: "https://empportal-7ff8d.firebaseio.com",
+  projectId: "empportal-7ff8d",
+  storageBucket: "",
+  messagingSenderId: "1075824580712"
 };
 
 /*

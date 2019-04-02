@@ -1,0 +1,20 @@
+<h4 class="mt-md-4 mb-md-4">Employee Lists</h4>
+<table class="table table-bordered" *ngIf="employees.length > 0; else other_content">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Gender</th>
+      <th>Department</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees | sort:'firstName'">
+      <td>{{employee.firstName }}</td>
+      <td>{{employee.lastName}}</td>
+      <td>{{employee.gender}}</td>
+      <td>{{employee.department}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #other_content>Employees are not registered</ng-template>
