@@ -10,6 +10,7 @@ import { EmpData } from './../Model/emp-data';
 export class EmpListComponent implements OnInit {
 
   employees: Array<EmpData>;
+  availableEmp: boolean = false;
 
   constructor(private empService: RegistrationService) { }
 
@@ -20,6 +21,9 @@ export class EmpListComponent implements OnInit {
   loadAllEmployees() {
     this.empService.getAllEmployees().subscribe((res) => {
       this.employees = res;
+      if(this.employees.length > 0) {
+        this.availableEmp = true;
+      }
     });
   }
 
