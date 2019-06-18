@@ -1,11 +1,12 @@
 <h4 class="mt-md-4 mb-md-4">Employee Lists</h4>
-<table class="table table-bordered" *ngIf="availableEmp; else other_content">
+<table class="table table-bordered" *ngIf="employees.length > 0; else other_content">
   <thead>
     <tr>
       <th>Index</th>
       <th>Firstname</th>
       <th>Lastname</th>
       <th>Gender</th>
+      <!--<th>DOB</th>-->
       <th>Department</th>
     </tr>
   </thead>
@@ -15,6 +16,9 @@
       <td>{{employee.firstName }}</td>
       <td>{{employee.lastName}}</td>
       <td>{{employee.gender}}</td>
+      <!--<td *ngIf="employee.dob">
+        {{employee.dob.day}}/{{employee.dob.month}}/{{employee.dob.year}}
+      </td> -->
       <td>{{employee.department}}</td>
     </tr>
   </tbody>

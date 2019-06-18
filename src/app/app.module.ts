@@ -6,7 +6,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { NgDatepickerModule } from 'ng2-datepicker';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { EmpRegisterComponent } from './emp-register/emp-register.component';
@@ -26,8 +26,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgDatepickerModule,
     FormsModule,
+    NgbModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment)
   ],

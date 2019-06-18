@@ -31,11 +31,8 @@ export class EmpRegisterComponent implements OnInit {
     }
   }
 
-  clearValues() {
-    this.empData.firstName = '';
-    this.empData.lastName = '';
-    this.empData.gender = '';
-    this.empData.department = '';
+  clearValues(empRegistrationData: NgForm) {
+    empRegistrationData.resetForm();
   }
 
 
